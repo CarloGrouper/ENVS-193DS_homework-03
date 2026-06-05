@@ -65,7 +65,7 @@ ggplot(kelp, aes(x = temp_c, y = kelp_elong)) +
 # Fit simple linear regression model.
 kelp_lm <- lm(kelp_elong ~ temp_c, data = kelp)
 
-# Diagnostic plots for assumptions
+# Diagnostic plots for assumptions.
 par(mfrow = c(2, 2))
 plot(kelp_lm)
 
@@ -77,8 +77,8 @@ The assumptions of simple linear regression that were checked include linearity,
 
 ```{r}
 
-# Pearson correlation test
-cor.test(kelp$temp_c, kelp$kelp_elong)
+# Fit simple linear regression model.
+kelp_lm <- lm(kelp_elong ~ temp_c, data = kelp)
 
 # View model summary.
 summary(kelp_lm)
@@ -87,15 +87,24 @@ summary(kelp_lm)
 
 ## 1d
 
-To evaluate the relationship between ocean temperature and giant kelp frond elongation rate, I used both a Pearson correlation test and a simple linear regression model because both methods quantify the strength and direction of a relationship between two continuous variables.
+To evaluate the relationship between ocean temperature and giant kelp frond elongation rate, I used both a simple linear regression model because the method quantifies the strength and direction of a relationship between two continuous variables.
 
-The Pearson correlation showed a significant negative relationship between temperature and kelp growth (r = -0.688, p \< 0.001, 95% CI \[-0.836, -0.446\]). The linear regression confirmed this result, showing that kelp elongation rate significantly decreases as temperature increases ($\beta$ = -0.432, p \< 0.001, $R^2$ = 0.473).
+A simple linear regression was calculated to predict kelp frond elongation rate (cm/day) based on ocean temperature (°C). A significant regression equation was found, (F(1, 30) = 26.93, p \< 0.001, $\alpha$ = 0.05), with an $R^2$ = 0.473. Kelp frond elongation rate is equal to 14.09 − 0.43(x). Temperature was a significant predictor of kelp frond elongation rate ($\beta$ = -0.432, p \< 0.001, $\alpha$ = 0.05).
 
 ## 1e
 
-
+These results suggest that increasing ocean temperature is associated with reduced giant kelp frond elongation rates (negative correlation). For a team working on kelp forest conservation and management, these findings suggest that continued ocean warming could reduce kelp productivity and potentially impact species that depend on kelp habitats.
 
 ## 1f
+
+```{r}
+
+# Pearson correlation test (alternative test)
+cor.test(kelp$temp_c, kelp$kelp_elong)
+
+```
+
+The Pearson correlation showed a significant negative relationship between temperature and kelp growth (r = -0.688, p < 0.001, 95% CI [-0.836, -0.446], $\alpha$ = 0.05). This result is consistent with the simple linear regression analysis, which also indicated a significant negative relationship between temperature and kelp frond elongation rate. Both tests lead to the same conclusions where when ocean temperature increases, kelp frond elongation rate decreases, and the relationship is statistically significant in both approaches.
 
 # Problem 2. Personal data
 
