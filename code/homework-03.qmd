@@ -18,9 +18,9 @@ suppressPackageStartupMessages(library(readxl))
 
 suppressPackageStartupMessages(library(janitor))
 
-kelp <- read_csv(here("data", "temp-kelp.csv"))
+kelp <- read_csv(here("data", "temp-kelp.csv"), show_col_types = FALSE)
 
-bird <- read_csv(here("data", "bird_weather_observations.csv"))
+bird <- read_csv(here("data", "bird_weather_observations.csv"), show_col_types = FALSE)
 
 ```
 
@@ -119,7 +119,6 @@ The Pearson correlation showed a significant negative relationship between tempe
 # where one of the variables was spelled wrong
 # and became a new category.
 bird$Condition <- gsub("MosltyCloudy", "MostlyCloudy", bird$Condition)
-unique(bird$Condition)
 bird$Condition <- as.factor(bird$Condition)
 
 bird_clean <- bird |>
@@ -183,9 +182,9 @@ ggplot(bird_clean, aes(x = Temp_F, y = SmallBird)) +
 
 ## 2b
 
-**Figure 1.** Large bird abundance across different weather conditions in Isla Vista. The figure shows variation in large bird counts across conditions such as Fair, Cloudy, Mist, Rain, Fog, and Smoke. Overall, large bird abundance appears to vary by condition where we see a potential increase in large bird abundance in mostly cloudy weather and fair weather and a decrease in large bird abundance in misty and cloudy weather, although some categories (such as Rain and Fog) have low sample sizes, which may limit comparison across groups.
+**Figure 1.** Large bird abundance across different weather conditions in Isla Vista. The figure shows variation in large bird counts across conditions such as Fair, Cloudy, Mist, Rain, Fog, and Smoke. Each box represents the distribution of bird counts for a given weather condition, where the center line is the median, the box represents the interquartile range (25th to 75th percentile), and the whiskers show the range of the data excluding outliers. Individual points represent raw observations from each sampling day. Overall, large bird abundance appears to vary by condition where we see a potential increase in large bird abundance in mostly cloudy weather and fair weather and a decrease in large bird abundance in misty and cloudy weather, although some categories (such as Rain and Fog) have low sample sizes, which may limit comparison across groups.
 
-**Figure 2.** Relationship between temperature (°F) and small bird abundance in Isla Vista. The scatter plot shows a general pattern between increasing temperature and increases in small bird counts, suggesting a potential relationship between temperature and small bird abundance, although there is noticeable variability in the data.
+**Figure 2.** Relationship between temperature (°F) and small bird abundance in Isla Vista. Each point represents a single observation (one sampling event on a given day), showing the recorded temperature and corresponding number of small birds observed during that sampling period. The scatter plot shows a general pattern between increasing temperature and increases in small bird counts, suggesting a potential relationship between temperature and small bird abundance, although there is noticeable variability in the data.
 
 # Problem 3. Affective visualization
 
