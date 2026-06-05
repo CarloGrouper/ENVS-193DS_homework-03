@@ -34,6 +34,26 @@ To evaluate the relationship between ocean temperature and giant kelp frond elon
 
 ```{r}
 
+# ggplot will give us our default plot using kelp
+# object and then aes will help us specify the
+# x-axis and y-axis of interest.
+ggplot(kelp, aes(x = temp_c, y = kelp_elong)) +
+  # geom_point will create the actual
+  # scatter plot, and we can use steelblue as the
+  # color and alpha to reduce opacity.
+  geom_point(color = "steelblue", alpha = 0.7) +
+  # This lets us rename our x-axis and y-axis to
+  # something much cleaner.
+  labs(
+    x = "Ocean temperature (°C)",
+    y = "Kelp frond elongation rate (cm/day)",
+    # title allows us to name title.
+    title = "Relationship between temperature and kelp growth"
+  ) +
+  # Nothing more than a theme that I found to be
+  # pleasing to the eyes.
+  theme_minimal()
+
 ```
 
 
