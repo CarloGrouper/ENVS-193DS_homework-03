@@ -110,6 +110,78 @@ The Pearson correlation showed a significant negative relationship between tempe
 
 ## 2a
 
+### Data cleanup
+
+```{r}
+
+# This troubleshooting code below was used to
+# change an error in my variable "Condition"
+# where one of the variables was spelled wrong
+# and became a new category.
+bird$Condition <- gsub("MosltyCloudy", "MostlyCloudy", bird$Condition)
+unique(bird$Condition)
+bird$Condition <- as.factor(bird$Condition)
+
+bird_clean <- bird |>
+  drop_na(BigBird, SmallBird, Condition, Temp_F)
+
+```
+
+
+```{r}
+
+# This will give us base layer and define our
+# x-axis and our y-axis.
+# This step will also use our clean bird data.
+ggplot(bird_clean, aes(x = Condition, y = BigBird)) +
+  # geom_boxplot will give us a box plot, which
+  # is ideal given we have seven categorical 
+  # variables.
+  # Light blue was chosen cause it looks like a
+  # cloudy-ish color.
+  geom_boxplot(fill = "lightblue") +
+  # geom_jitter allows us to represent our
+  # observations through jittered points.
+  geom_jitter(width = 0.2, alpha = 0.5, height = 0) +
+  # labs will allow us to rename our title,
+  # x-axis, and y axis.
+  labs(
+    title = "Large bird abundance across weather conditions in Isla Vista",
+    x = "Weather condition",
+    y = "Number of large birds"
+  ) +
+  # Although I prefer theme_minimal, theme_bw
+  # was chosen to reduce redundancy.
+  theme_bw() +
+  # theme is being used to adjust minor spacing 
+  # and put our x-axis variables at an angle in
+  # order to fit the labels.
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r}
+
+# This will select our clean bird data, and
+# select appropriate columns for our x-axis and
+# our y-axis.
+ggplot(bird_clean, aes(x = Temp_F, y = SmallBird)) +
+  # geom_point inserts our data as a scatter
+  # plot to plot out small bird points.
+  geom_point(color = "darkblue", alpha = 0.6) +
+  # labs is used to rename our x-axis and y-axis
+  # to something more appropriate.
+  labs(
+    title = "Effect of temperature on small bird abundance in Isla Vista",
+    x = "Temperature (°F)",
+    y = "Number of small birds"
+  ) +
+  # theme_bw selected to remain consistent with
+  # it's paired figure above.
+  theme_bw()
+
+```
+
 ## 2b
 
 # Problem 3. Affective visualization
