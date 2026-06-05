@@ -104,7 +104,7 @@ cor.test(kelp$temp_c, kelp$kelp_elong)
 
 ```
 
-The Pearson correlation showed a significant negative relationship between temperature and kelp growth (r = -0.688, p < 0.001, 95% CI [-0.836, -0.446], $\alpha$ = 0.05). This result is consistent with the simple linear regression analysis, which also indicated a significant negative relationship between temperature and kelp frond elongation rate. Both tests lead to the same conclusions where when ocean temperature increases, kelp frond elongation rate decreases, and the relationship is statistically significant in both approaches.
+The Pearson correlation showed a significant negative relationship between temperature and kelp growth (r = -0.688, p \< 0.001, 95% CI \[-0.836, -0.446\], $\alpha$ = 0.05). This result is consistent with the simple linear regression analysis, which also indicated a significant negative relationship between temperature and kelp frond elongation rate. Both tests lead to the same conclusions where when ocean temperature increases, kelp frond elongation rate decreases, and the relationship is statistically significant in both approaches.
 
 # Problem 2. Personal data
 
@@ -126,7 +126,6 @@ bird_clean <- bird |>
   drop_na(BigBird, SmallBird, Condition, Temp_F)
 
 ```
-
 
 ```{r}
 
@@ -183,6 +182,10 @@ ggplot(bird_clean, aes(x = Temp_F, y = SmallBird)) +
 ```
 
 ## 2b
+
+**Figure 1.** Large bird abundance across different weather conditions in Isla Vista. The figure shows variation in large bird counts across conditions such as Fair, Cloudy, Mist, Rain, Fog, and Smoke. Overall, large bird abundance appears to vary by condition where we see a potential increase in large bird abundance in mostly cloudy weather and fair weather and a decrease in large bird abundance in misty and cloudy weather, although some categories (such as Rain and Fog) have low sample sizes, which may limit comparison across groups.
+
+**Figure 2.** Relationship between temperature (°F) and small bird abundance in Isla Vista. The scatter plot shows a general pattern between increasing temperature and increases in small bird counts, suggesting a potential relationship between temperature and small bird abundance, although there is noticeable variability in the data.
 
 # Problem 3. Affective visualization
 
