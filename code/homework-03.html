@@ -105,10 +105,54 @@ window.Quarto = {
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#problem-1.-giant-kelp-fronds" id="toc-problem-1.-giant-kelp-fronds" class="nav-link" data-scroll-target="#problem-1.-giant-kelp-fronds">Problem 1. Giant kelp fronds</a>
+  <ul class="collapse">
+  <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">1a</a></li>
+  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">1b</a></li>
+  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c">1c</a>
+  <ul class="collapse">
+  <li><a href="#check-assumptions" id="toc-check-assumptions" class="nav-link" data-scroll-target="#check-assumptions">Check assumptions</a></li>
+  <li><a href="#run-statistical-tests" id="toc-run-statistical-tests" class="nav-link" data-scroll-target="#run-statistical-tests">Run statistical tests</a></li>
+  </ul></li>
+  <li><a href="#d" id="toc-d" class="nav-link" data-scroll-target="#d">1d</a></li>
+  <li><a href="#e" id="toc-e" class="nav-link" data-scroll-target="#e">1e</a></li>
+  <li><a href="#f" id="toc-f" class="nav-link" data-scroll-target="#f">1f</a></li>
+  </ul></li>
+  <li><a href="#problem-2.-personal-data" id="toc-problem-2.-personal-data" class="nav-link" data-scroll-target="#problem-2.-personal-data">Problem 2. Personal data</a>
+  <ul class="collapse">
+  <li><a href="#a-1" id="toc-a-1" class="nav-link" data-scroll-target="#a-1">2a</a>
+  <ul class="collapse">
+  <li><a href="#data-cleanup" id="toc-data-cleanup" class="nav-link" data-scroll-target="#data-cleanup">Data cleanup</a></li>
+  </ul></li>
+  <li><a href="#b-1" id="toc-b-1" class="nav-link" data-scroll-target="#b-1">2b</a></li>
+  </ul></li>
+  <li><a href="#problem-3.-affective-visualization" id="toc-problem-3.-affective-visualization" class="nav-link" data-scroll-target="#problem-3.-affective-visualization">Problem 3. Affective visualization</a>
+  <ul class="collapse">
+  <li><a href="#a-2" id="toc-a-2" class="nav-link" data-scroll-target="#a-2">3a</a></li>
+  <li><a href="#b-2" id="toc-b-2" class="nav-link" data-scroll-target="#b-2">3b</a></li>
+  <li><a href="#c-1" id="toc-c-1" class="nav-link" data-scroll-target="#c-1">3c</a></li>
+  <li><a href="#d-1" id="toc-d-1" class="nav-link" data-scroll-target="#d-1">3d</a></li>
+  <li><a href="#e-1" id="toc-e-1" class="nav-link" data-scroll-target="#e-1">3e</a></li>
+  </ul></li>
+  <li><a href="#problem-4.-statistical-critique" id="toc-problem-4.-statistical-critique" class="nav-link" data-scroll-target="#problem-4.-statistical-critique">Problem 4. Statistical critique</a>
+  <ul class="collapse">
+  <li><a href="#a-3" id="toc-a-3" class="nav-link" data-scroll-target="#a-3">4a</a></li>
+  <li><a href="#b-3" id="toc-b-3" class="nav-link" data-scroll-target="#b-3">4b</a></li>
+  <li><a href="#c-2" id="toc-c-2" class="nav-link" data-scroll-target="#c-2">4c</a></li>
+  <li><a href="#d-2" id="toc-d-2" class="nav-link" data-scroll-target="#d-2">4d</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="homework-03.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -249,7 +293,7 @@ F-statistic: 26.93 on 1 and 30 DF,  p-value: 1.366e-05</code></pre>
 </section>
 <section id="d" class="level2">
 <h2 class="anchored" data-anchor-id="d">1d</h2>
-<p>To evaluate the relationship between ocean temperature and giant kelp frond elongation rate, I used both a simple linear regression model because the method quantifies the strength and direction of a relationship between two continuous variables.</p>
+<p>To evaluate the relationship between ocean temperature and giant kelp frond elongation rate, I used a simple linear regression model because the method quantifies the strength and direction of a relationship between two continuous variables.</p>
 <p>A simple linear regression was calculated to predict kelp frond elongation rate (cm/day) based on ocean temperature (°C). A significant regression equation was found, (F(1, 30) = 26.93, p &lt; 0.001, <span class="math inline">\(\alpha\)</span> = 0.05), with an <span class="math inline">\(R^2\)</span> = 0.473. Kelp frond elongation rate is equal to 14.09 − 0.43(x). Temperature was a significant predictor of kelp frond elongation rate (<span class="math inline">\(\beta\)</span> = -0.432, p &lt; 0.001, <span class="math inline">\(\alpha\)</span> = 0.05).</p>
 </section>
 <section id="e" class="level2">
@@ -420,24 +464,31 @@ sample estimates:
 </section>
 <section id="d-1" class="level2">
 <h2 class="anchored" data-anchor-id="d-1">3d</h2>
+<p>My piece shows bird observations collected during field surveys in Isla Vista, using large and small bird abundance across different temperatures. I was influenced by Jill Pelto’s artwork, which combines scientific data with artistic visuals to communicate environmental information. My work is a digital visualization created in R and then modified as an artistic sketch. I created it by plotting my bird survey data and then redesigning the graph to emphasize atmosphere, color, and the relationship between weather conditions and bird activity.</p>
 </section>
 <section id="e-1" class="level2">
 <h2 class="anchored" data-anchor-id="e-1">3e</h2>
+<p>[View Google Slides](https://docs.google.com/presentation/d/1Py_tZungdfwa2j16yptvBFdn_NkbFC24tl2svlfJKzA/edit?usp=sharing)</p>
 </section>
 </section>
 <section id="problem-4.-statistical-critique" class="level1">
 <h1>Problem 4. Statistical critique</h1>
 <section id="a-3" class="level2">
 <h2 class="anchored" data-anchor-id="a-3">4a</h2>
+<p><img src="PaperGrouper.png" class="img-fluid"></p>
+<p>The authors use generalized linear mixed-effects models (GLMMs) with a Poisson error distribution and log link to test whether grouper abundance changed over time across survey years. They treat daily fish counts as repeated measures across months and years, allowing them to model variation while accounting for non-independence in the sampling design. Pairwise comparisons between years are conducted using z-tests through the emmeans package in R. These tests are used to evaluate whether observed changes in abundance across 2009, 2014, and 2019 are statistically significant.</p>
 </section>
 <section id="b-3" class="level2">
 <h2 class="anchored" data-anchor-id="b-3">4b</h2>
+<p>The figure shows the relationship between total abundance (x-axis) and mean daily density with standard error (y-axis) for three grouper species, with each species shown in a separate panel. Individual raw data points are included and color-coded (red, green, blue), which helps make the underlying data structure visible. The axes are logically arranged and the positive relationships are easy to interpret across all three species. However, overlapping large point sizes obscure some data points, which slightly reduces clarity in denser regions.</p>
 </section>
 <section id="c-2" class="level2">
 <h2 class="anchored" data-anchor-id="c-2">4c</h2>
+<p>The figure is relatively clean, with clear separation between species and minimal unnecessary visual elements. The main issue is overplotting caused by large point sizes, which hides some data points and reduces readability in higher-density areas. The color scheme is effective for distinguishing species, but having all three species represented in this way is slightly distracting and intimidating to read at first glance. Also, on the x-axis the maximum abundance of all three species varies, meaning a direct side-by-side comparison could be considered misleading. Overall, the design is strong but would benefit from reducing point size to improve transparency, along with minor reformatting.</p>
 </section>
 <section id="d-2" class="level2">
 <h2 class="anchored" data-anchor-id="d-2">4d</h2>
+<p>I would recommend reducing the point size and adding transparency to reduce overplotting and make individual observations easier to distinguish. I would also standardize the x-axis range across all three species so that differences in abundance are visually comparable rather than potentially misleading due to scaling. To reduce visual intimidation, the figure could benefit from simplifying the color emphasis or improving spacing between panels so the viewer can focus on one species at a time. These changes would improve interpretability while still preserving the key statistical relationships shown in the data.</p>
 </section>
 </section>
 
