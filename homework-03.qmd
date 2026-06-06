@@ -2,8 +2,10 @@
 title: "homework-03"
 author: "Carlo Lapayese-Calderon"
 date: 2026-06-04
-format: pdf
-editor: visual
+format: 
+  html:
+    toc: true
+  pdf: default
 ---
 
 # Setup
