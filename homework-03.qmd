@@ -2,11 +2,7 @@
 title: "homework-03"
 author: "Carlo Lapayese-Calderon"
 date: 2026-06-04
-format: 
-  html: 
-    toc: true
-  pdf: 
-    toc: true
+format: pdf
 editor: visual
 ---
 
@@ -232,11 +228,11 @@ An affective visualization of my bird survey data could depict individual bird o
 
 ## 3b
 
-![](bird_art_sketch.png)
+![](code/bird_art_sketch.png)
 
 ## 3c
 
-![](bird_draft.png)
+![](code/bird_draft.png)
 
 ## 3d
 
@@ -250,7 +246,7 @@ My piece shows bird observations collected during field surveys in Isla Vista, u
 
 ## 4a
 
-![](PaperGrouper.png)
+![](code/PaperGrouper.png)
 
 The authors use generalized linear mixed-effects models (GLMMs) with a Poisson error distribution and log link to test whether grouper abundance changed over time across survey years. They treat daily fish counts as repeated measures across months and years, allowing them to model variation while accounting for non-independence in the sampling design. Pairwise comparisons between years are conducted using z-tests through the emmeans package in R. These tests are used to evaluate whether observed changes in abundance across 2009, 2014, and 2019 are statistically significant.
 
